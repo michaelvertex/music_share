@@ -25,6 +25,11 @@ function http_get(url, success) {
 
 
 http_get('https://api.discogs.com/artists/5/releases?sort=year&sort_order=desc', function(data) {
+
+    // here is where you parse the api data
+
+    console.log(data)
+
     for (let i=0; i<data.releases.length; ++i) {
         console.log(data.releases[i].title);
     }
